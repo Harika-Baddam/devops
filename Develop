@@ -1,4 +1,16 @@
-First commit message 
-Hello world by feature1
-commited feature2
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '6.x'
+
+- script: echo "Building application"
+- script: echo "Deploying application"
 
